@@ -29,6 +29,9 @@ var bootstrapPeers = [
 ]
 
 ;(async () => {
+
+  const PORT = process.env.PORT || 63785
+
   // Create the Node
   const libp2p = await Libp2p.create({
     addresses: {
@@ -48,7 +51,7 @@ var bootstrapPeers = [
     config: {
       peerDiscovery: {
         bootstrap: {
-          list: ['/ip4/127.0.0.1/tcp/63785/ipfs/QmWjz6xb8v9K4KnYEwP5Yk75k5mMBCehzWFLCvvQpYxF3d']
+          list: ['/ip4/127.0.0.1/tcp/${PORT}/ipfs/QmWjz6xb8v9K4KnYEwP5Yk75k5mMBCehzWFLCvvQpYxF3d']
         }
       },
       dht: {
