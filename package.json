@@ -4,15 +4,15 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-      "start": "node index.js",
-      "deploy": "gcloud app deploy"
+        "start": "node index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
-      "type": "git",
-      "url": "https://github.com/jlogelin/gcp-libp2p-sample.git"
+        "type": "git",
+        "url": "https://github.com/jlogelin/gcp-libp2p-sample.git"
     },
     "engines": {
-      "node": "14.x.x"
+        "node": "14.x.x"
     },
     "dependencies": {
         "it-pipe": "^1.1.0",
@@ -34,10 +34,6 @@
         "wrtc": "^0.4.6"
     },
     "devDependencies": {},
-    "scripts": {
-        "start": "node index.js",
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
     "keywords": [],
     "author": "",
     "license": "ISC"
