@@ -40,6 +40,7 @@ const PubsubChat = require('./chat')
   //libp2p.handle(ChatProtocol.PROTOCOL, ChatProtocol.handler)
 
   // Set up our input handler
+  /*
   process.stdin.on('data', (message) => {
     // remove the newline
     message = message.slice(0, -1)
@@ -60,6 +61,7 @@ const PubsubChat = require('./chat')
       }
     })
   })
+  */
 
   // Start the node
   await libp2p.start()
@@ -69,6 +71,7 @@ const PubsubChat = require('./chat')
   libp2p.upgrader.protocols.forEach((_, p) => console.log(p))
 
   // Create the Pubsub based chat extension
+  /*
   const pubsubChat = new PubsubChat(libp2p, PubsubChat.TOPIC, ({ from, message }) => {
     let fromMe = from === libp2p.peerId.toB58String()
     let user = from.substring(0, 6)
@@ -92,6 +95,7 @@ const PubsubChat = require('./chat')
       console.error('Could not publish chat', err)
     }
   })
+  */
 })()
 
 
