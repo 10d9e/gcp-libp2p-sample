@@ -71,7 +71,6 @@ const PubsubChat = require('./chat')
   libp2p.upgrader.protocols.forEach((_, p) => console.log(p))
 
   // Create the Pubsub based chat extension
-  /*
   const pubsubChat = new PubsubChat(libp2p, PubsubChat.TOPIC, ({ from, message }) => {
     let fromMe = from === libp2p.peerId.toB58String()
     let user = from.substring(0, 6)
@@ -81,6 +80,7 @@ const PubsubChat = require('./chat')
     console.info(`${fromMe ? PubsubChat.CLEARLINE : ''}${user}(${new Date(message.created).toLocaleTimeString()}): ${message.data}`)
   })
 
+  /*
   // Set up our input handler
   process.stdin.on('data', async (message) => {
     // Remove trailing newline
