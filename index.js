@@ -5,8 +5,6 @@ const Libp2p = require('libp2p')
 // Transports
 const TCP = require('libp2p-tcp')
 const Websockets = require('libp2p-websockets')
-const WebrtcStar = require('libp2p-webrtc-star')
-// const wrtc = require('wrtc')
 // Stream Muxer
 const Mplex = require('libp2p-mplex')
 // Connection Encryption
@@ -21,7 +19,7 @@ const KadDHT = require('libp2p-kad-dht')
 const Gossipsub = require('libp2p-gossipsub')
 
 var bootstrapPeers = [
-  "/ip4/35.224.203.143/tcp/63785/ipfs/QmWjz6xb8v9K4KnYEwP5Yk75k5mMBCehzWFLCvvQpYxF3d",
+  //"/ip4/35.224.203.143/tcp/63785/ipfs/QmWjz6xb8v9K4KnYEwP5Yk75k5mMBCehzWFLCvvQpYxF3d",
   "/dnsaddr/bootstrap.libp2p.io/ipfs/QmNnooDu7bfjPFoTZYxMNLWUQJyrVwtbZg5gBMjTezGAJN",
   "/dnsaddr/bootstrap.libp2p.io/ipfs/QmQCU2EcMqAqQPR2i9bChDtGNJchTbq5TbXJJ16u19uLTa",
   "/dnsaddr/bootstrap.libp2p.io/ipfs/QmbLHAnMoJPWSCR5Zhtx6BHJX9KiKNN6tpvbUcqanj75Nb",
@@ -51,7 +49,7 @@ var bootstrapPeers = [
     config: {
       peerDiscovery: {
         bootstrap: {
-          list: ["/ip4/35.224.203.143/tcp/63785/ipfs/QmWjz6xb8v9K4KnYEwP5Yk75k5mMBCehzWFLCvvQpYxF3d"]
+          list: ["/ip4/0.0.0.0/tcp/63785/ipfs/QmWjz6xb8v9K4KnYEwP5Yk75k5mMBCehzWFLCvvQpYxF3d"]
         }
       },
       dht: {
